@@ -7,9 +7,9 @@ from bs4 import BeautifulSoup
 
 
 CHANGE_PASSWORD_PAGE="https://ums.lpu.in/lpuums/frmchangepassword.aspx"
-USER="11408062"
-PSWD="Thunder#6"
-TEMP="Thunder#5"
+USER=""
+PSWD=""
+TEMP=""
 
 class Password:#pylint:disable=missing-docstring,wrong-import-order,trailing-whitespace, multiple-imports, too-few-public-methods
     def __init__(self,user,pswd,new_pswd):
