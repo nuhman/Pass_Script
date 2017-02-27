@@ -10,6 +10,7 @@ CHANGE_PASSWORD_PAGE="https://ums.lpu.in/lpuums/frmchangepassword.aspx"
 USER=""
 PSWD=""
 TEMP=""
+#carefull
 
 class Password:#pylint:disable=missing-docstring,wrong-import-order,trailing-whitespace, multiple-imports, too-few-public-methods
     def __init__(self,user,pswd,new_pswd):
