@@ -1,15 +1,16 @@
 '''
-Logs The User Back To The System
+Log Me IN BACK!!!
 '''
 import traceback,sys #pylint:disable=multiple-imports
 from bs4 import BeautifulSoup
 import requests
 
 
+PAGE="http://172.17.90.32:8090/httpclient.html"
+#Provide Your Credentials
 
-CHANGE_PASSWORD_PAGE="http://172.17.90.32:8090/httpclient.html"
-USER="11407738"
-PSWD="qz"
+USER=""
+PSWD=""
 
 class Password:#pylint:disable=missing-docstring,wrong-import-order,trailing-whitespace, multiple-imports, too-few-public-methods
     def __init__(self,user,pswd):
@@ -17,7 +18,7 @@ class Password:#pylint:disable=missing-docstring,wrong-import-order,trailing-whi
         self.pswd=pswd
     def logMeBack(self):#pylint:disable=missing-docstring,wrong-import-order,trailing-whitespace, multiple-imports
         try:
-            r = requests.get(CHANGE_PASSWORD_PAGE)
+            r = requests.get(PAGE)
             soup = BeautifulSoup(r.text, 'html.parser')
 
             payload={
@@ -26,7 +27,7 @@ class Password:#pylint:disable=missing-docstring,wrong-import-order,trailing-whi
                     "password":self.pswd,
                     "btnSubmit":"Login",
             }
-            r = requests.post(CHANGE_PASSWORD_PAGE,data=payload,verify=False)
+            r = requests.post(PAGE,data=payload,verify=False)
             print(r.text)    
         except:#pylint:disable=bare-except
             traceback.print_exc(file=sys.stdout)
