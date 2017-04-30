@@ -11,7 +11,7 @@ You Need to open up the file in any standard text-editor and change the variable
   
 ## Client Authentication Re-Login  
 
-###Relogin.py
+### Relogin.py
 Change `USER` and `PSWD` with your current username and password.
 Run the batch process by double-clicking the `run.bat` file. Default timer set to 10 seconds.
 
